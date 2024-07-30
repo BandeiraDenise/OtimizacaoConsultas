@@ -1,7 +1,7 @@
 {
   "name": "Oracle 11g Dev Container",
   "build": {
-       "dockerfile": "../Dockerfile"
+       "dockerfile": "Dockerfile"
   }, 
   "workspaceFolder": "/workspaces",
   "extensions": [
