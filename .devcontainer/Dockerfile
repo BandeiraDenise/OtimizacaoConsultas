@@ -38,7 +38,7 @@ RUN chmod +x /opt/oracle/scripts/init.sh
 #ENTRYPOINT ["/opt/oracle/scripts/init.sh"]
 
 # Expondo portas necessárias
-EXPOSE 1521
+EXPOSE 1521 8080
 
 # Comando de inicialização
 #CMD ["your-startup-command"]
