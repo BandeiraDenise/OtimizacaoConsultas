@@ -3,7 +3,7 @@
   "build": {
        "dockerfile": "Dockerfile"
   }, 
-  "workspaceFolder": "/workspaces",
+  "workspaceFolder": "/workspace",
   "extensions": [
         "redhat.vscode-yaml",
         "ms-azuretools.vscode-docker",
