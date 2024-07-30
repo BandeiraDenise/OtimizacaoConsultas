@@ -3,8 +3,13 @@
 # Iniciar o banco de dados Oracle
 /etc/init.d/oracle-xe start
 
-# Esperar o banco de dados iniciar completamente
-sleep 60
+# Esperar até que o Oracle esteja completamente inicializado
+while ! echo exit | sqlplus -s system/oracle@localhost:1521/XE; do
+  echo "Aguardando o Oracle inicializar..."
+  sleep 10
+done
+
+echo "Oracle iniciado com sucesso."
 
 # Manter o contêiner em execução
 tail -f /dev/null
