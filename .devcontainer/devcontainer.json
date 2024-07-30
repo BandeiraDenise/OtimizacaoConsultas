@@ -20,5 +20,7 @@
             }
         ]
   },
-  "postCreateCommand": "bash /opt/oracle/scripts/init.sh"
+  "postCreateCommand": "docker exec -it $(docker ps -qf 'name=oracle-xe') /bin/bash -c 'source /opt/oracle/scripts/init.sh && sqlplus system/oracle@localhost:1521/XE'"
 }
+
+
