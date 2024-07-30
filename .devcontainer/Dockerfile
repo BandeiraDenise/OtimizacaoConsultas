@@ -18,6 +18,22 @@ RUN apt-get update && apt-get install -y \
 # (Você precisa adicionar comandos específicos para a instalação do Oracle Database)
 FROM oracleinanutshell/oracle-xe-11g
 
+# Copiar arquivos para o contêiner
+COPY ./dados/TAB_AIR_AIRLINES.ctl /opt/oracle/scripts/
+COPY ./dados/TAB_AIR_AIRLINES.txt /opt/oracle/scripts/
+
+COPY ./dados/TAB_AIR_AIRPLANE_TYPES.ctl /opt/oracle/scripts/
+COPY ./dados/TAB_AIR_AIRPLANE_TYPES.txt /opt/oracle/scripts/
+
+# Copiar o script de inicialização
+COPY ./dados/init.sh /opt/oracle/scripts/
+
+# Tornar o script executável
+RUN chmod +x /opt/oracle/scripts/init.sh
+
+# Definir o ponto de entrada
+ENTRYPOINT ["/opt/oracle/scripts/init.sh"]
+
 # Expondo portas necessárias
 EXPOSE 1521
 
