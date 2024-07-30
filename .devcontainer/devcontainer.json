@@ -1,25 +1,24 @@
 {
-  "name": "oracle-db",
-  "dockerFile": "Dockerfile",
-  "context": ".",
-  "service": "oracle",
+  "name": "Oracle 11g Dev Container",
+  "build": {
+       "dockerfile": "Dockerfile"
+  }, 
   "workspaceFolder": "/workspaces",
   "extensions": [
-    "oracle.oracle-developer-tools-for-visual-studio-code"
+        "redhat.vscode-yaml",
+        "ms-azuretools.vscode-docker",
+        "oracle.oracledevtools"  
   ],
   "settings": {
-    "sqltools.connections": [
-      {
-        "name": "OracleDB",
-        "driver": "Oracle",
-        "server": "localhost",
-        "port": 1521,
-        "database": "ORCL",
-        "username": "system",
-        "password": "oracle",
-        "connectString": "localhost:1521/ORCL"
-      }
-    ]
+        "terminal.integrated.shell.linux": "/bin/bash",
+        "oracle.oracledevtools.connections": [
+            {
+                "name": "XE",
+                "username": "system",
+                "password": "oracle",
+                "connectString": "localhost:1521/XE"
+            }
+        ]
   },
-"postCreateCommand": "bash ./OtimizacaoConsultas/dados/init.sh"
+  "postCreateCommand": "bash ./OtimizacaoConsultas/dados/init.sh"
 }
