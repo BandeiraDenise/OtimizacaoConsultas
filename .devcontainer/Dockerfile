@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y \
   curl \
   unzip \
   lsb-release \
+  vim \
   && rm -rf /var/lib/apt/lists/*
 
 # Instalação do Oracle Database
@@ -32,14 +33,13 @@ COPY /workspaces/OtimizacaoConsultas/data/TAB_AIR_AIRLINES.txt /opt/oracle/data/
 COPY /workspaces/OtimizacaoConsultas/dados/init.sh /opt/oracle/scripts/
 
 # Tornar o script executável
-RUN chmod +x /opt/oracle/scripts/init.sh
+RUN chmod +x /opt/oracle/scripts/*.sh
 
 # Definir o ponto de entrada
-ENTRYPOINT ["/opt/oracle/scripts/init.sh"]
+#ENTRYPOINT ["/opt/oracle/scripts/init.sh"]
 
 # Expondo portas necessárias
 EXPOSE 1521 8080
 
 # Comando para iniciar o Oracle e executar os scripts de inicialização
-CMD ["/bin/bash", "-c", "/opt/oracle/scripts/init.sh"]
-
+CMD ["/bin/bash", "-c", "/opt/oracle/scripts/init.sh && /bin/bash"]
