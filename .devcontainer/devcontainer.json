@@ -20,5 +20,6 @@
             }
         ]
   },
-  "postCreateCommand": "bash ./OtimizacaoConsultas/dados/init.sh"
+  "postCreateCommand": "chmod +x /workspace/OtimizacaoConsultas/dados/init.sh",
+  "remoteUser": "vscode"
 }
