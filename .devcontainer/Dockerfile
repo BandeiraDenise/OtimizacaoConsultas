@@ -41,5 +41,5 @@ ENTRYPOINT ["/opt/oracle/scripts/init.sh"]
 EXPOSE 1521 8080
 
 # Comando para iniciar o Oracle e executar os scripts de inicialização
-#CMD ["/bin/bash", "-c", "/opt/oracle/scripts/init.sh"]
+CMD ["/bin/bash", "-c", "/opt/oracle/scripts/init.sh"]
 
