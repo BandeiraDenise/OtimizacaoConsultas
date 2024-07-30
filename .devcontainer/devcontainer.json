@@ -20,6 +20,5 @@
             }
         ]
   },
-  "postCreateCommand": "chmod +x /workspace/OtimizacaoConsultas/dados/init.sh",
-  "remoteUser": "vscode"
+  "postCreateCommand": "bash /opt/oracle/scripts/init.sh"
 }
