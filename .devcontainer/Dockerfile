@@ -5,7 +5,6 @@
 
 #RUN chmod -R 755 /docker-entrypoint-initdb.d/
 
-
 FROM ubuntu:20.04
 
 # Instalação de pacotes necessários
