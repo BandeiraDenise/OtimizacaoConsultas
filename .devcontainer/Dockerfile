@@ -35,14 +35,11 @@ COPY /workspaces/OtimizacaoConsultas/dados/init.sh /opt/oracle/scripts/
 RUN chmod +x /opt/oracle/scripts/init.sh
 
 # Definir o ponto de entrada
-#ENTRYPOINT ["/opt/oracle/scripts/init.sh"]
+ENTRYPOINT ["/opt/oracle/scripts/init.sh"]
 
 # Expondo portas necessárias
 EXPOSE 1521 8080
 
-# Comando de inicialização
-#CMD ["your-startup-command"]
-
 # Comando para iniciar o Oracle e executar os scripts de inicialização
-CMD ["/bin/bash", "-c", "/opt/oracle/scripts/init.sh"]
+#CMD ["/bin/bash", "-c", "/opt/oracle/scripts/init.sh"]
 
