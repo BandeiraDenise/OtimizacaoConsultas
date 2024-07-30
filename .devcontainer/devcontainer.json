@@ -1,6 +1,7 @@
 {
   "name": "oracle-db",
-  "dockerComposeFile": "../docker-compose.yml",
+  "dockerFile": "Dockerfile",
+  "context": ".",
   "service": "oracle",
   "workspaceFolder": "/workspaces",
   "extensions": [
