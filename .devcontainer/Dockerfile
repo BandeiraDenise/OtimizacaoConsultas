@@ -23,7 +23,7 @@ ENV ORACLE_PWD=oracle
 
 # Copiar arquivos para o contêiner
 COPY /workspaces/OtimizacaoConsultas/dados/TAB_AIR_AIRLINES.ctl /opt/oracle/scripts/
-COPY /workspaces/OtimizacaoConsultas/dados/TAB_AIR_AIRLINES.txt /opt/oracle/data/
+COPY /workspaces/OtimizacaoConsultas/data/TAB_AIR_AIRLINES.txt /opt/oracle/data/
 
 #COPY ./dados/TAB_AIR_AIRPLANE_TYPES.ctl /opt/oracle/scripts/
 #COPY ./dados/TAB_AIR_AIRPLANE_TYPES.txt /opt/oracle/scripts/
