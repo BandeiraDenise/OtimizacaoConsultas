@@ -1,10 +1,11 @@
 version: '3.8'
 
 services:
-  oracle:
-    image: oracleinanutshell/oracle-xe-11g
-    container_name: oracle-db
-    environment:
+  oracle-db:
+    build:
+      context: .
+      dockerfile: Dockerfile
+   environment:
       - ORACLE_PWD=oracle
       - ORACLE_ALLOW_REMOTE=true
     ports:
@@ -15,8 +16,5 @@ services:
     networks:
       - oracle-network
 
-volumes:
-  oracle-data:
-
-networks:
-  oracle-network:
+    # Overrides default command so things don't shut down after the process ends.
+    command: sleep infinity
