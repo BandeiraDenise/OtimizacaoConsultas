@@ -1,4 +1,4 @@
-que{
+{
   "name": "Oracle 11g Dev Container",
   "dockerFile": "Dockerfile",
   "customizations/vscode/extensions": [
