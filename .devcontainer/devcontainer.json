@@ -1,14 +1,13 @@
 {
   "name": "Oracle 11g Dev Container",
   "dockerFile": "Dockerfile",
-  "context": ".",
   "workspaceFolder":"/workspaces",
-  "extensions": [
+  "customizations/vscode/extensions": [
         "redhat.vscode-yaml",
         "ms-azuretools.vscode-docker",
         "oracle.oracledevtools"  
   ],
-  "settings": {
+  "customizations/vscode/settings": {
         "terminal.integrated.shell.linux": "/bin/bash",
         "oracle.oracledevtools.connections": [
             {
