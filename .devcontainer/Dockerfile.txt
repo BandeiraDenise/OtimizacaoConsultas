@@ -18,14 +18,14 @@ ENV ORACLE_SID=XE
 ENV ORACLE_PWD=oracle
 
 # Copiar arquivos para o contêiner
-COPY ./dados/TAB_AIR_AIRLINES.ctl /opt/oracle/scripts/
+COPY ./scripts/TAB_AIR_AIRLINES.ctl /opt/oracle/scripts/
 COPY ./data/TAB_AIR_AIRLINES.txt /opt/oracle/data/
 
-#COPY ./dados/TAB_AIR_AIRPLANE_TYPES.ctl /opt/oracle/scripts/
+#COPY ./scripts/TAB_AIR_AIRPLANE_TYPES.ctl /opt/oracle/scripts/
 #COPY ./data/TAB_AIR_AIRPLANE_TYPES.txt /opt/oracle/data/
 
 # Copiar o script de inicialização
-COPY ./dados/init.sh /opt/oracle/scripts/
+COPY ./scripts/init.sh /opt/oracle/scripts/
 
 # Tornar o script executável
 RUN chmod +x /opt/oracle/scripts/*.sh
