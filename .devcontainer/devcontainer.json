@@ -1,8 +1,7 @@
 {
   "name": "Oracle 11g Dev Container",
   "build": {
-    "dockerfile": "Dockerfile",
-    "context": ".."
+    "dockerfile": "Dockerfile"
   },
   "extensions": [
         "redhat.vscode-yaml",
