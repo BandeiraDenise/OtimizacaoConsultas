@@ -1,9 +1,7 @@
 {
   "name": "Oracle 11g Dev Container",
-  "build": {
-    "dockerfile": "/Dockerfile"
-  },
-  "workspaceFolder": "/workspaces",
+  "dockerComposeFile": "docker-compose.yml",
+	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
   "extensions": [
         "redhat.vscode-yaml",
         "ms-azuretools.vscode-docker",
