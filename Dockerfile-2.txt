@@ -1,0 +1,40 @@
+FROM ubuntu:20.04
+
+# Instalação de pacotes necessários
+RUN apt-get update && apt-get install -y \
+  curl \
+  unzip \
+  lsb-release \
+  vim \
+  && rm -rf /var/lib/apt/lists/*
+
+# Instalação do Oracle Database
+# (Você precisa adicionar comandos específicos para a instalação do Oracle Database)
+FROM oracleinanutshell/oracle-xe-11g
+
+# Definir variáveis de ambiente
+ENV ORACLE_HOME=/u01/app/oracle/product/11.2.0/xe
+ENV ORACLE_SID=XE
+ENV ORACLE_PWD=oracle
+
+# Copiar arquivos para o contêiner
+COPY ./scripts/TAB_AIR_AIRLINES.ctl /opt/oracle/scripts/
+COPY ./data/TAB_AIR_AIRLINES.txt /opt/oracle/data/
+
+#COPY ./scripts/TAB_AIR_AIRPLANE_TYPES.ctl /opt/oracle/scripts/
+#COPY ./data/TAB_AIR_AIRPLANE_TYPES.txt /opt/oracle/data/
+
+# Copiar o script de inicialização
+COPY ./scripts/init.sh /opt/oracle/scripts/
+
+# Tornar o script executável
+RUN chmod +x /opt/oracle/scripts/*.sh
+
+# Definir o ponto de entrada
+#ENTRYPOINT ["/opt/oracle/scripts/init.sh"]
+
+# Expondo portas necessárias
+EXPOSE 1521 8080
+
+# Comando para iniciar o Oracle e executar os scripts de inicialização
+CMD ["/bin/bash", "-c", "/opt/oracle/scripts/init.sh && /bin/bash"]
