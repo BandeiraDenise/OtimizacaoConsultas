@@ -1,6 +1,6 @@
 {
   "name": "Oracle 11g Dev Container",
-  "dockerFile": "Dockerfile",
+  "dockerFile": "/workspaces/OtimizacaoConsultas/.devcontainer/Dockerfile",
   "workspaceFolder":"/workspaces/OtimizacaoConsultas",
   "customizations/vscode/extensions": [
         "redhat.vscode-yaml",
