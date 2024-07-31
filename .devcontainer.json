@@ -3,6 +3,8 @@
   "build": {
     "dockerfile": "Dockerfile"
   },
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached", 
+  "workspaceFolder": "/workspace",
   "extensions": [
         "redhat.vscode-yaml",
         "ms-azuretools.vscode-docker",
