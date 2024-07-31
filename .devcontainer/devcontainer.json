@@ -1,6 +1,6 @@
 {
   "name": "Oracle 11g Dev Container",
-  "dockerFile": "Dockerfile",
+  "dockerFile": "./.devcontainer/Dockerfile",
   "customizations/vscode/extensions": [
         "redhat.vscode-yaml",
         "ms-azuretools.vscode-docker",
