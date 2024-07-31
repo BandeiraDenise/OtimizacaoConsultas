@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  oracle:
+    image: oracleinanutshell/oracle-xe-11g
+    container_name: oracle-db
+    environment:
+      - ORACLE_PWD=oracle
+      - ORACLE_ALLOW_REMOTE=true
+    ports:
+      - "1521:1521"
+      - "5500:5500"
+    volumes:
+      - oracle-data:/u01/app/oracle
+    networks:
+      - oracle-network
+
+volumes:
+  oracle-data:
+
+networks:
+  oracle-network:
