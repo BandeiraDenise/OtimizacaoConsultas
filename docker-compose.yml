@@ -1,20 +1,15 @@
 version: '3.8'
-
 services:
-  oracle-db:
-    build:
-      context: .
-      dockerfile: Dockerfile
-   environment:
-      - ORACLE_PWD=oracle
-      - ORACLE_ALLOW_REMOTE=true
+  oracle:
+    image: gvenzl/oracle-free:latest
+    container_name: oracle-db
+    environment:
+      - ORACLE_PASSWORD=oracle
     ports:
       - "1521:1521"
       - "5500:5500"
     volumes:
-      - oracle-data:/u01/app/oracle
-    networks:
-      - oracle-network
-
-    # Overrides default command so things don't shut down after the process ends.
-    command: sleep infinity
+      - oracle-data:/opt/oracle/oradata
+volumes:
+  oracle-data:
+  
