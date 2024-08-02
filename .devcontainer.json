@@ -1,23 +1,14 @@
 {
-  "name": "Oracle 11g Dev Container",
-  "dockerComposeFile": "docker-compose.yml",
-  "extensions": [
-        "redhat.vscode-yaml",
-        "ms-azuretools.vscode-docker",
-        "oracle.oracledevtools"  
-  ],
-  "settings": {
-        "terminal.integrated.shell.linux": "/bin/bash",
-        "oracle.oracledevtools.connections": [
-            {
-                "name": "XE",
-                "username": "system",
-                "password": "oracle",
-                "connectString": "localhost:1521/XE"
-            }
-        ]
-  },
-  "postCreateCommand": "docker exec -it $(docker ps -qf 'name=oracle-xe') /bin/bash -c 'source /opt/oracle/scripts/init.sh && sqlplus system/oracle@localhost:1521/XE'"
-}
-
-
+    "name": "Oracle DB with SQLcl",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "oracle",
+    "workspaceFolder": "OtimizacaoConsultas",
+    "extensions": [
+      "ms-azuretools.vscode-docker"
+    ],
+    "settings": {
+      "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "postCreateCommand": "docker-compose up -d && sleep 60 && docker exec -it oracle-db /bin/bash"
+  }
+  
