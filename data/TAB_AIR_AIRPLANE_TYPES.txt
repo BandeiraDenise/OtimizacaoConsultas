@@ -1,3 +1,4 @@
+"AIRPLANE_TYPE_ID"	"NAME"
 322	"Dufaux 4"
 323	"Dufaux 5"
 324	"Mitsubishi Regional Jet"

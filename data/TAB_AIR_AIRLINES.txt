@@ -1,3 +1,4 @@
+"AIRLINE_ID"	"IATA"	"AIRLINE_NAME"	"BASE_AIRPORT_ID"
 1	"AF"	"Afghanistan Airlines"	850
 2	"AL"	"Albania Airlines"	10274
 3	"AM"	"American Samoa Airli"	9210
