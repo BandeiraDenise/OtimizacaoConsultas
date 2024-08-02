@@ -1,8 +1,8 @@
 {
-    "name": "Oracle DB with SQLcl",
+    "name": "Oracle DB with SQL*Plus",
     "dockerComposeFile": "docker-compose.yml",
     "service": "oracle",
-    "workspaceFolder": "OtimizacaoConsultas",
+    "workspaceFolder": "/workspaces/OracleCodespaces",
     "extensions": [
       "ms-azuretools.vscode-docker"
     ],
