@@ -1,0 +1,10 @@
+drop table air_airlines cascade constraints;
+drop table air_airplane_types cascade constraints;
+drop table air_airplanes cascade constraints;
+drop table air_airports cascade constraints;
+drop table air_airports_geo cascade constraints;
+drop table air_bookings cascade constraints;
+drop table air_flights cascade constraints;
+drop table air_flights_schedules cascade constraints;
+drop table air_passengers cascade constraints;
+drop table air_passengers_details cascade constraints;
