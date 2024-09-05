@@ -26,10 +26,15 @@ Este repositório fornece um ambiente baseado em Docker para Oracle Database e S
      
 4. **Execute as seguintes instruções para criar as tabelas já com seus dados**
    - No terminal do SQL*Plus:
+     
    SQL> @data/script1.sql (aguarde até o prompt do SQL*Plus retornar)
+   
    SQL> @data/script2.sql (aguarde até o prompt do SQL*Plus retornar)
+   
    SQL> @data/script3.sql (aguarde até o prompt do SQL*Plus retornar)
+   
    SQL> @data/script4.sql (aguarde até o prompt do SQL*Plus retornar)
+   
    
 OBSERVAÇÃO: alguns scripts podem retornar algumas mensagens de erro, não interrompa a execução e dexe terminar; os erros acontecem pois reduzimos o volume de dados de algumas tabelas, mas isso não afeta a realização do trabalho.
 
