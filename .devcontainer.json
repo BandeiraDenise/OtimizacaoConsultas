@@ -1,5 +1,4 @@
 {
-{
   "name": "Ambiente Fase 2 - Python Leve",
   "image": "mcr.microsoft.com/devcontainers/python:3",
   "postCreateCommand": "sudo apt update && sudo apt install default-jre -y && docker compose up -d"
